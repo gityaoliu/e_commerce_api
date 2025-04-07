@@ -19,6 +19,26 @@ const shopReviewRouter = require("./routes/shop/review-routes");
 
 const commonFeatureRouter = require("./routes/common/feature-routes");
 
+const swaggerJsdoc = require("swagger-jsdoc");
+const swaggerUi = require("swagger-ui-express");
+
+const swaggerSpec = swaggerJsdoc({
+  definition: {
+    openapi: "3.0.0",
+    info: {
+      title: "API Documentation",
+      version: "1.0.0",
+      description: "This is the API documentation for your project.",
+    },
+  },
+  apis: [
+    "./routes/admin/**/*.js",
+    "./routes/auth/**/*.js",
+    "./routes/common/**/*.js",
+    "./routes/shop/**/*.js",
+  ],
+});
+
 //create a database connection -> u can also
 //create a separate file for this and then import/use that file here
 
@@ -29,6 +49,8 @@ mongoose
 
 const app = express();
 const PORT = process.env.PORT || 8000;
+
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 app.use(
   cors({
@@ -67,4 +89,5 @@ app.get("/", (req, res) => {
 app.listen(PORT, "0.0.0.0", () => {
   console.log(`Server is now running on port ${PORT}`);
 });
+
 
