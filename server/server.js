@@ -32,10 +32,10 @@ const swaggerSpec = swaggerJsdoc({
     },
   },
   apis: [
-    "./routes/admin/**/*.js",
-    "./routes/auth/**/*.js",
-    "./routes/common/**/*.js",
-    "./routes/shop/**/*.js",
+    "./server/routes/admin/**/*.js",
+    "./server/routes/auth/**/*.js",
+    "./server/routes/common/**/*.js",
+    "./server/routes/shop/**/*.js",
   ],
 });
 
