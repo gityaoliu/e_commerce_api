@@ -10,15 +10,34 @@ const router = express.Router();
  * @swagger
  * /api/shop/products/get:
  *   get:
- *     summary: 获取筛选后的商品列表
+ *     summary: Get filtered product list
  *     tags:
  *       - Shop Products
  *     responses:
  *       200:
- *         description: 成功返回商品列表
+ *         description: Successfully returns product list
  */
 router.get("/get", getFilteredProducts);
-
+/**
+ * @swagger
+ * /api/shop/products/get/{id}:
+ *   get:
+ *     summary: Get product details by ID
+ *     tags:
+ *       - Shop Products
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *         description: The ID of the product to retrieve
+ *     responses:
+ *       200:
+ *         description: Successfully returns product details
+ *       404:
+ *         description: Product not found
+ */
 router.get("/get/:id", getProductDetails);
 
 module.exports = router;
