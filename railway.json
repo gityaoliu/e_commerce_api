@@ -1,4 +1,7 @@
 {
+    "build": {
+      "root": "."
+    },
     "start": "npm start"
-}
+  }
   
