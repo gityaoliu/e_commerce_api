@@ -1,6 +1,4 @@
 {
-    "build": {
-      "root": "server"
-    },
     "start": "npm start"
-  }
+}
+  
