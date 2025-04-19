@@ -62,7 +62,8 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 app.use(
   cors({
-    origin: "http://localhost:5174",  // <-- 根据需要修改你的前端应用地址
+    // origin: "http://localhost:5174",  // <-- 根据需要修改你的前端应用地址
+    origin: "ecommerceapi-production-d535.up.railway.app", 
     methods: ["GET", "POST", "DELETE", "PUT"],
     allowedHeaders: [
       "Content-Type",
