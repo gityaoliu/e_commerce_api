@@ -51,11 +51,11 @@ const app = express();
 const PORT = process.env.PORT || 8000;
 
 // Serve static files from the 'client/dist' directory
-app.use(express.static(path.join(__dirname, 'client', 'dist')));  // <-- 添加这行代码
+app.use(express.static(path.join(__dirname, '..', 'client', 'dist')));  // <-- 添加这行代码
 
 // Serve the index.html for the root route
 app.get('/', (req, res) => {  // <-- 添加这个路由
-  res.sendFile(path.join(__dirname, 'client', 'dist', 'index.html'));  // <-- 添加这个路径
+  res.sendFile(path.join(__dirname, '..','client', 'dist', 'index.html'));  // <-- 添加这个路径
 });
 
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
