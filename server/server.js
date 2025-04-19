@@ -62,10 +62,7 @@ app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 app.use(
   cors({
-    origin: [
-      "http://localhost:5174",  
-      "https://ecommerceapi-production-d535.up.railway.app",  
-    ],
+    origin: "https://ecommerceapi-production-d535.up.railway.app",
     methods: ["GET", "POST", "DELETE", "PUT"],
     allowedHeaders: [
       "Content-Type",
