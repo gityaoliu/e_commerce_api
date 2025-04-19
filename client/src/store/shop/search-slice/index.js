@@ -10,7 +10,7 @@ export const getSearchResults = createAsyncThunk(
   "/order/getSearchResults",
   async (keyword) => {
     const response = await axios.get(
-      `http://localhost:8000/api/shop/search/${keyword}`
+      `https://ecommerceapi-production-d535.up.railway.app/api/shop/search/${keyword}`
     );
 
     return response.data;

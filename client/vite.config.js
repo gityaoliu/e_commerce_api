@@ -29,7 +29,7 @@ export default defineConfig({
     port: 5174, 
     proxy: {
       "/api": {
-        target: "http://localhost:8000", 
+        target: "https://ecommerceapi-production-d535.up.railway.app", 
         changeOrigin: true,
         secure: false,
       },
