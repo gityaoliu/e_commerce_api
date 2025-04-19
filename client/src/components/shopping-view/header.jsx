@@ -140,7 +140,7 @@ function ShoppingHeader() {
       <div className="flex h-16 items-center justify-between px-4 md:px-6">
         <Link to="/shop/home" className="flex items-center gap-2">
           <Hand className="h-8 w-8 text-[#f57ad4]" />
-          <span className="font-bold ">NailCode</span>
+          <span className="font-bold ">BeautyBuy</span>
         </Link>
         <Sheet> 
           <SheetTrigger asChild>

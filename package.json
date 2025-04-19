@@ -1,5 +1,5 @@
 {
-  "name": "nailcode",
+  "name": "beautybuy",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -8,7 +8,7 @@
     "start": "node server/server.js",
     "dev": "nodemon server.js"
   },
-  "author": "nailcode-members",
+  "author": "beautybuy-members",
   "license": "ISC",
   "dependencies": {
     "bcryptjs": "^2.4.3",
